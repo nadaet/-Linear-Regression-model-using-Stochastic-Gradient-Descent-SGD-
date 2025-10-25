@@ -1,23 +1,37 @@
 # -Linear-Regression-model-using-Stochastic-Gradient-Descent-SGD-
-Overview:
-The goal of this project is to train a linear model that predicts the relationship between X and y.
-The model learns to fit a straight line y = m * x + b that minimizes the mean squared error (MSE)
--------------------------------------------
-How it works:
-Initialize the slope (m) and intercept (b) to zero.
+This project implements a Multiple Linear Regression model trained using Stochastic Gradient Descent (SGD) — completely from scratch, without using any machine learning libraries such as scikit-learn or TensorFlow.
+----------------------------------
+ Model Details
 
-For each data point:
+Algorithm: Multiple Linear Regression
 
-Compute the prediction y_pred = m * x + b
+Optimization: Stochastic Gradient Descent (SGD)
 
-Calculate the error (y - y_pred)
+Loss Function: Mean Squared Error (MSE)
+----------------------------------
+How the Code Works
 
-Update m and b using gradient descent:
+Data Loading:
+Reads data from MultipleLR.csv. If the file doesn’t exist, uses predefined data.
 
-dm = -2 * x * (y - y_pred)
-db = -2 * (y - y_pred)
-Repeat for a number of epochs to minimize the error.
----------------------------------------------------
-Technologies Used:
-Python 3
-NumPy
+Model Initialization:
+Initializes all weights (including bias) to zero.
+
+Training (SGD):
+
+Iterates through the data for a specified number of epochs.
+
+Updates weights after each training sample 
+
+Evaluation:
+Calculates Mean Squared Error (MSE) every 100 epochs to track progress.
+--------------------------------
+ Notes
+
+If you get nan values in the output, try decreasing the learning rate.
+
+You can also normalize the data for better convergence.
+-------------------------
+Author
+Nada Etman
+computer engineering student
